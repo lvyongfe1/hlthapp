@@ -1,0 +1,64 @@
+<ion-view  title="体重">
+
+
+
+  <ion-header-bar class="bar-subheader">
+    <div class="button-bar">
+      <div class="button-bar">
+        <a class="button"  ng-class="{true: 'current', false: ''}[flag0]" ng-click="flag0 = true;flag1 = false;flag2 = false;flag3 = false;showChart(0)">日</a>
+        <a class="button"  ng-class="{true: 'current', false: ''}[flag1]" ng-click="flag0 = false;flag1 = true;flag2 = false;flag3 = false;showChart(1)">周</a>
+        <a class="button"  ng-class="{true: 'current', false: ''}[flag2]" ng-click="flag0 = false;flag1 = false;flag2 = true;flag3 = false;showChart(2)">月</a>
+        <a class="button"  ng-class="{true: 'current', false: ''}[flag3]" ng-click="flag0 = false;flag1 = false;flag2 = false;flag3 = true;showChart(3)">年</a>
+      </div>
+    </div>
+  </ion-header-bar>
+
+
+    <ion-content>
+
+      <div id="weightChart" style="height:200px;width:100%;border: 1px solid teal"></div>
+
+
+      <div>
+        <div class="col .col-33" style="margin-left: 20px;" ng-model="avgWeight.avg">
+          体重（平均）：{{avgWeight.avg}}KG</br>
+          BMI（平均）：{{avgWeight.bmi}}
+        </div>
+      </div>
+
+
+      <div class="row">
+        <div class="col .col-33"  >
+          <a class="button button-clear button-dark" style="font-size: 14px;height:20px;min-height: 22px;" href="#/app/tabs/weight/all"> 显示所有数据</a>
+        </div>
+      </div>
+
+      <div class="row">
+      <div class="col .col-33"  >
+        <a class="button button-clear button-dark" style="font-size: 14px;height:20px;min-height: 22px;" href="#/app/tabs/weight/add"> 添加数据</a>
+      </div>
+      </div>
+
+      <div class="row">
+        <div class="col .col-33"  >
+          <a class="button button-clear button-dark" style="font-size: 14px;height:20px;min-height: 22px;">共享数据</a>
+        </div>
+      </div>
+
+<div style="margin-top:17px;margin-left: 17px;" ng-bind-html="info">
+
+
+
+</div>
+
+
+  </ion-content>
+
+
+
+
+
+
+</ion-view>
+
+

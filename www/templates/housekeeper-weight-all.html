@@ -1,0 +1,46 @@
+
+<ion-view title="所有已记录数据">
+
+
+  <ion-nav-buttons side="right">
+
+
+
+    <button class="button button-icon icon ion-ios-checkmark-outline"  ng-click="save()">
+
+    </button>
+
+    <button class="button button-icon icon ion-ios-minus-outline"  ng-click="data.showDelete = !data.showDelete; data.showReorder = false;removeClass();">
+
+    </button>
+
+  </ion-nav-buttons>
+
+
+  <ion-content>
+
+    <ion-list show-delete="data.showDelete" show-reorder="data.showReorder">
+
+      <ion-item ng-repeat="item in items" item="item" href="#/item/{{item.id}}" class="item-remove-animate">
+
+            {{ item.value }}KG
+
+            <span class="item-note">
+
+                 {{item.measureTime}}
+
+            </span>
+
+        <ion-delete-button id="allRateBackButton{{item.id}}" ng-class="{true: 'ion-ios-checkmark', false: 'ion-ios-circle-outline'}[flag]" style="color:#111" ng-click="flag = !flag;onItemDelete(item,flag,event)">
+        </ion-delete-button>
+
+
+
+      </ion-item>
+
+    </ion-list>
+
+  </ion-content>
+
+
+</ion-view>

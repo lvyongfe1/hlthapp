@@ -1,0 +1,36 @@
+
+<ion-view view-title="计步">
+  <ion-content>
+
+    <div class="list card">
+
+      <div class="item item-avatar runDataDetail">
+        <h2>{{dataDetail.deseg}}<span>公斤</span></h2>
+        <p style="margin-bottom: 10px">更新时间：今天 13:26</p>
+        <div class="inline">
+          <h3>目标</h3>
+          <p>{{dataDetail.aim}}公斤</p>
+        </div>
+        <div class="inline" style="width: 30%">
+          <h3>体脂率</h3>
+          <p>{{dataDetail.fat}}%</p>
+        </div>
+        <div class="inline">
+          <h3>血压</h3>
+          <p>{{dataDetail.blood}}</p>
+        </div>
+        <img ng-src="{{dataDetail.face}}">
+      </div>
+    </div>
+    <div class="list card">
+      <div class="item item-body" ng-app="ngAnimate" ng-controller="runChartCtrl">
+        <bar id="weightChart">
+
+        </bar>
+      </div>
+    </div>
+    <div style="width: 100%;padding: 10px">
+      <button class="button button-block button-calm"><i class="icon ion-share"></i>分享</button>
+    </div>
+  </ion-content>
+</ion-view>

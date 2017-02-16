@@ -1,0 +1,67 @@
+<ion-view  title="添加心率数据">
+
+
+<!--  <ion-nav-buttons side="left">
+    <button class="button button-icon icon ion-ios-arrow-thin-left" ng-click="back()"></button>
+  </ion-nav-buttons>-->
+
+  <ion-nav-buttons side="right">
+
+
+
+    <button class="button button-icon icon ion-ios-checkmark-outline"  ng-click="save()" >
+
+    </button>
+
+  </ion-nav-buttons>
+
+  <ion-content>
+
+    <div class="list">
+
+      <div class="item item-button-right">
+        日期
+        <button class="button button-clear button-dark"  ng-click="setDate()">
+          {{currentDate | date:'yyyy-MM-dd' }}
+        </button>
+      </div>
+
+      <div class="item item-button-right">
+        时间
+        <button class="button button-clear button-dark" ng-click="setTime()">
+          {{currentTime}}
+        </button>
+      </div>
+
+      <div class="item item-button-right">
+         心率(次/分)
+
+          <input class="button button-clear button-dark" type="text" style="text-align: right" ng-model="rate.rate">
+
+
+      </div>
+
+    </div>
+
+
+
+<!--    <label class="item item-input">
+      <span class="input-label">服务时间：</span>
+      <ionic-timepicker input-obj="vipTimePickerObject" class="item-button-right">
+        <button class="button button-clear button-positive ">
+          <standard-time-no-meridian
+            etime='vipTimePickerObject.inputEpochTime'></standard-time-no-meridian>
+        </button>
+      </ionic-timepicker>
+    </label>-->
+
+<!--    <ionic-timepicker input-obj="timePickerObject">
+      <button class="button button-block button-positive overflowShow">
+        <standard-time-meridian etime='timePickerObject.inputEpochTime'></standard-time-meridian>
+      </button>
+    </ionic-timepicker>-->
+
+  </ion-content>
+
+
+</ion-view>

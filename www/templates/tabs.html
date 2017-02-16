@@ -1,0 +1,35 @@
+<!--
+Create tabs with an icon and label, using the tabs-positive style.
+Each tab's child <ion-nav-view> directive will have its own
+navigation history that also transitions its views in and out.
+-->
+
+<ion-tabs class="tabs-icon-bottom tabs-color-active-positive">
+
+  <!--"badges.carts"-->
+  <ion-tab title="首页" href="#app/tabs/first"  nav-clear icon-off="ion-ios-pulse" icon-on="ion-ios-pulse-strong"    badge="badges.carts" badge-style="badge-assertive">
+    <ion-nav-view name="tab-first"></ion-nav-view>
+  </ion-tab>
+
+  <!-- Chats Tab -->
+  <ion-tab title="健康管家" nav-clear  href="#app/tabs/housekeeper"  icon-off="ion-ios-chatboxes-outline" icon-on="ion-ios-chatboxes">
+    <ion-nav-view name="tab-housekeeper"></ion-nav-view>
+  </ion-tab>
+
+  <!-- Account Tab -->
+  <ion-tab title="寻医问诊" href="#app/tabs/searchvisits" icon-off="ion-ios-medkit-outline" icon-on="ion-ios-medkit">
+    <ion-nav-view name="tab-searchvisits"></ion-nav-view>
+  </ion-tab>
+
+  <ion-tab title="健康资讯" href="#app/tabs/healthinquiry/healthnews" icon-off="ion-ios-chatbubble-outline" icon-on="ion-ios-chatbubble">
+    <ion-nav-view name="tab-healthinquiry"></ion-nav-view>
+  </ion-tab>
+
+
+  <ion-tab title="个人中心" href="#app/tabs/usercenter" icon-off="ion-ios-gear-outline" icon-on="ion-ios-gear" >
+    <ion-nav-view name="tab-usercenter"></ion-nav-view>
+  </ion-tab>
+
+
+
+</ion-tabs>

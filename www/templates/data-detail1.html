@@ -1,0 +1,36 @@
+
+<ion-view view-title="计步">
+  <ion-content>
+
+<div class="list card">
+
+  <div class="item item-avatar runDataDetail">
+    <h2>{{dataDetail.deseg}}<span>步</span></h2>
+    <p style="margin-bottom: 10px">更新时间：今天 13:26</p>
+    <div class="inline">
+      <h3>距离</h3>
+      <p>{{dataDetail.length}}公里</p>
+    </div>
+    <div class="inline" style="width: 30%">
+      <h3>时长</h3>
+      <p>{{dataDetail.time}}小时</p>
+    </div>
+    <div class="inline">
+      <h3>热量</h3>
+      <p>{{dataDetail.cal}}千卡</p>
+    </div>
+    <img ng-src="{{dataDetail.face}}">
+  </div>
+</div>
+  <div class="list card">
+    <div class="item item-body">
+      <bar id="runChart">
+
+      </bar>
+    </div>
+  </div>
+    <div style="width: 100%;padding: 10px">
+      <button class="button button-block button-calm"><i class="icon ion-share"></i>分享</button>
+    </div>
+  </ion-content>
+</ion-view>

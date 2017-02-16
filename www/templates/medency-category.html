@@ -1,0 +1,73 @@
+
+
+
+<ion-view view-title="{{typeName}}">
+
+  <ion-nav-buttons side="left">
+    <a class="button button-icon icon ion-ios-arrow-thin-left" ng-click="goBack()" nav-direction="back"></a>
+  </ion-nav-buttons>
+
+    <ion-content class="padding">
+
+
+
+
+
+<!--      <ion-list>
+
+        <ion-item class="item item-thumbnail-left" style="padding-top: 0px;" type="item-text-wrap" ng-click="goBack()">
+
+          <img src="img/150x165/ankit-gera.png">
+          癫痫患者还是乖乖服药吧
+
+
+        </ion-item>
+
+
+          <ion-item class="item item-thumbnail-left"   type="item-text-wrap" href="#/app/tabs/medcatedetail">
+
+        <img src="img/150x165/ankit-gera.png">
+
+          为什么癫痫发作时禁止往嘴里塞任何东西
+
+          </ion-item>
+
+
+        <ion-item class="item item-thumbnail-left"   type="item-text-wrap" href="#/app/tabs/medcatedetail">
+
+        <img src="img/150x165/ankit-gera.png">
+
+        有时候，医生也不知道你得了什么病！
+
+        </ion-item>
+
+        <ion-item class="item item-thumbnail-left"  type="item-text-wrap" href="#/app/tabs/medcatedetail">
+
+          <img src="img/150x165/ankit-gera.png">
+
+          得了头疼脑热的小病，为什么医生要安排
+          做那么多检查？
+
+        </ion-item>
+
+      </ion-list>-->
+
+
+
+      <ion-list>
+      <ion-item class="item-remove-animate item-avatar item-icon-right" ng-repeat="item in list" type="item-text-wrap" href="#/app/tabs/medcatedetail/{{item.id}}">
+
+        <h2>{{item.title}}</h2>
+        <!--<p>{{chat.lastText}}</p>-->
+
+      </ion-item>
+      </ion-list>
+
+    </ion-content>
+
+
+
+
+
+
+</ion-view>

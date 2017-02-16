@@ -1,0 +1,46 @@
+<ion-view  title="添加体重数据">
+
+
+  <ion-nav-buttons side="right">
+
+
+
+    <button class="button button-icon icon ion-ios-checkmark-outline"  ng-click="save()" >
+
+    </button>
+
+  </ion-nav-buttons>
+
+  <ion-content>
+
+    <div class="list">
+
+      <div class="item item-button-right">
+        日期
+        <button class="button button-clear button-dark"  ng-click="setDate()">
+          {{currentDate | date:'yyyy-MM-dd' }}
+        </button>
+      </div>
+
+      <div class="item item-button-right">
+        时间
+        <button class="button button-clear button-dark" ng-click="setTime()">
+          {{currentTime}}
+        </button>
+      </div>
+
+      <div class="item item-button-right">
+         体重(KG)
+
+          <input class="button button-clear button-dark" type="text" style="text-align: right" ng-model="rate.rate">
+
+
+      </div>
+
+    </div>
+
+
+  </ion-content>
+
+
+</ion-view>

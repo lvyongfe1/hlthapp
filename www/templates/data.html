@@ -1,0 +1,57 @@
+<ion-view view-title="健康数据">
+  <ion-content>
+    <ion-list>
+      <ion-item class="item item-avatar item-icon-right data" href="#/app/data/{{data[0].id}}">
+		   <img ng-src="{{data[0].face}}">
+          <i class="icon ion-chevron-right"></i>
+		   <h2>{{data[0].deseg}}</h2>
+          <div class="inline" style="margin-left: 23%">
+              <h3>性别</h3>
+              <p>{{data[0].sex}}</p>
+          </div>
+          <div class="inline" style="width: 30%">
+              <h3>出生日期</h3>
+              <p>{{data[0].berth}}</p>
+          </div>
+          <div class="inline">
+              <h3>身高</h3>
+              <p>{{data[0].height}}</p>
+          </div>
+      </ion-item>
+        <ion-item class="item item-avatar item-icon-right runData" href="#/app/data/{{data[1].id}}">
+            <img ng-src="{{data[1].face}}">
+            <i class="icon ion-chevron-right"></i>
+            <h2>{{data[1].deseg}}<span>步</span></h2>
+            <div class="inline" style="margin-left: 23%">
+                <h3>距离</h3>
+                <p>{{data[1].length}}公里</p>
+            </div>
+            <div class="inline" style="width: 30%">
+                <h3>时长</h3>
+                <p>{{data[1].time}}小时</p>
+            </div>
+            <div class="inline">
+                <h3>热量</h3>
+                <p>{{data[1].cal}}千卡</p>
+            </div>
+        </ion-item>
+        <ion-item class="item item-avatar item-icon-right runData" href="#/app/data/{{data[2].id}}">
+            <img ng-src="{{data[2].face}}">
+            <i class="icon ion-chevron-right"></i>
+            <h2>{{data[2].deseg}}<span>公斤</span></h2>
+            <div class="inline" style="margin-left: 23%">
+                <h3>目标</h3>
+                <p>{{data[2].aim}}公斤</p>
+            </div>
+            <div class="inline" style="width: 30%">
+                <h3>体脂率</h3>
+                <p>{{data[2].fat}}%</p>
+            </div>
+            <div class="inline">
+                <h3>血压</h3>
+                <p>{{data[2].blood}}</p>
+            </div>
+        </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>

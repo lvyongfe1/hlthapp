@@ -1,0 +1,48 @@
+<ion-view view-title="首页" hide-back-button="true">
+  <ion-content class="dashboard-content">
+    <p class="col-100 dashtitle">今日健康指数</p>
+    <div class="row" id="healthIndex">
+        <dbchart id="dbchart" style="width: 100%"></dbchart>
+    </div>
+    <div class="row dashboard-link">
+      <div class="col col-50">
+        <div class="inline">
+          <i class="icon ion-android-walk"></i>
+        </div>
+        <div class="inline">
+          <h2>{{data[1].deseg}}<span>步</span></h2>
+          <p>{{data[1].length}}公里</p>
+        </div>
+      </div>
+      <div class="col col-50">
+        <div class="inline">
+          <i class="icon ion-fireball"></i>
+        </div>
+        <div class="inline">
+          <h2>{{data[1].cal}}<span>千卡</span></h2>
+          <p>体脂率：{{data[2].fat}}%</p>
+        </div>
+      </div>
+    </div>
+    <div class="row dashboard-link">
+      <div class="col col-50">
+        <div class="inline">
+          <i class="icon ion-ios-speedometer-outline"></i>
+        </div>
+        <div class="inline">
+          <h2>{{data[2].deseg}}<span>公斤</span></h2>
+          <p>血压：{{data[2].blood}}</p>
+        </div>
+      </div>
+      <div class="col col-50">
+        <div class="inline">
+          <i class="icon ion-ios-moon-outline" style="font-size: 70px;"></i>
+        </div>
+        <div class="inline">
+          <h2>53<span>%</span></h2>
+          <p>时长：13h</p>
+        </div>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>

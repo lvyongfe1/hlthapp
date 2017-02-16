@@ -1,0 +1,53 @@
+<ion-view view-title="健康资讯">
+
+
+<!--    <ion-nav-back-button>
+      返回
+    </ion-nav-back-button>
+    <div class="buttons right-buttons">
+      <button class="button">
+        右侧按钮
+      </button>
+    </div>-->
+<!--    <ion-nav-buttons side="left">
+      <a href="javascript:history.back(-1)" class="button button-icon icon ion-ios-arrow-thin-left" nav-direction="back"></a>
+    </ion-nav-buttons>-->
+
+
+<!--    <ion-nav-buttons side="left">
+      <a class="button button-icon icon ion-ios-arrow-thin-left" ng-click="back()"></a>
+    </ion-nav-buttons>-->
+
+
+
+
+
+
+  <ion-content class="padding">
+
+    <ion-refresher pulling-text="Pull to refresh" on-refresh="vm.doRefresh()"></ion-refresher>
+    <div class="list card" ng-repeat="message in vm.messages" >
+      <div class="item item-divider item-icon-right">{{message.title}}
+        <i class="icon" ng-click="vm.show(message)" ng-class="message.static?'ion-arrow-down-b':'ion-arrow-right-b'"></i></div>
+      <div class="item item-body">
+        <div>
+          {{message.static?message.content:message.content.substr(0, 40)}}
+        </div>
+      </div>
+    </div>
+    <!-- ion-infinite-scroll 上拉加载数据指令 distance默认1% nf-if的值为false时，就禁止执行on-infinite  -->
+    <ion-infinite-scroll ng-if="!vm.moredata" on-infinite="vm.loadMore()" distance="1%" ></ion-infinite-scroll>
+
+
+
+    <ion-list>
+      <ion-item class="item-remove-animate item-avatar item-icon-right" ng-repeat="item in list" type="item-text-wrap" href="#/app/tabs/detail/{{item.id}}">
+
+        <h2>{{item.title}}</h2>
+        <!--<p>{{chat.lastText}}</p>-->
+
+      </ion-item>
+    </ion-list>
+
+  </ion-content>
+</ion-view>

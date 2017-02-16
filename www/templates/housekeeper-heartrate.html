@@ -1,0 +1,107 @@
+
+<!--ui-sref-opts="{cache: false}"-->
+
+
+
+
+<ion-view  title="心率">
+
+<!--  <ion-nav-bar class="bar-stable bar-calm">
+    <ion-nav-back-button class="button button-icon icon"
+                         ng-click="back()">
+      <a class="button button-clear button-icon icon ion-ios-arrow-thin-left"></a>{{""}}
+    </ion-nav-back-button>
+  </ion-nav-bar>-->
+
+<!--  <ion-header-bar class="bar-stable bar-calm">
+    <div class="buttons">
+      <button class="button button-icon" ng-click="back()">
+        <a class="button button-clear button-icon icon ion-ios-arrow-thin-left"></a>{{""}}
+      </button>
+    </div>
+
+    <h1 class="title">心率</h1>
+
+&lt;!&ndash;    <ion-nav-back-button class="button button-icon icon"
+                         ng-click="back()">
+      <a class="button button-clear button-icon icon ion-ios-arrow-thin-left"></a>{{""}}
+    </ion-nav-back-button>&ndash;&gt;
+  </ion-header-bar>-->
+
+
+<!--  <ion-nav-buttons side="left">
+    <a class="button button-icon icon ion-ios-arrow-thin-left" ng-click="back()" nav-direction="back"></a>
+  </ion-nav-buttons>-->
+
+  <ion-header-bar class="bar-subheader">
+    <div class="button-bar">
+      <div class="button-bar">
+        <a class="button"  tab-state ui-sref="app.tabs.heartrate.sub.date">日</a>
+        <a class="button" tab-state ui-sref="app.tabs.heartrate.sub.week">周</a>
+        <a class="button" tab-state ui-sref="app.tabs.heartrate.sub.month">月</a>
+        <a class="button" tab-state ui-sref="app.tabs.heartrate.sub.year">年</a>
+      </div>
+    </div>
+  </ion-header-bar>
+
+
+
+    <ion-content>
+
+      <!--<div   ui-view="heartrate-chart" style="height:200px;width:100%;border: 1px solid teal"></div>-->
+
+      <div ui-view></div>
+
+<!--<ion-view name="heartrate-chart"></ion-view>-->
+
+
+      <div>
+        <div class="col .col-33" style="margin-left: 20px;" ng-model="avgRate.avg">
+          安静心率（平均）：{{avgRate.avg}}次/分
+        </div>
+      </div>
+
+
+      <div class="row">
+        <div class="col .col-33"  >
+          <a class="button button-clear button-dark" style="font-size: 14px;height:20px;min-height: 22px;" href="#/app/tabs/heartrate/all"> 显示所有数据</a>
+        </div>
+      </div>
+
+      <div class="row">
+      <div class="col .col-33"  >
+        <a class="button button-clear button-dark" style="font-size: 14px;height:20px;min-height: 22px;" href="#/app/tabs/heartrate/add"> 添加数据</a>
+      </div>
+      </div>
+
+      <div class="row">
+        <div class="col .col-33"  >
+          <a class="button button-clear button-dark" style="font-size: 14px;height:20px;min-height: 22px;">共享数据</a>
+        </div>
+      </div>
+
+<div style="margin-top:17px;margin-left: 17px;">
+
+  安静心率：60～100次/分<br/>
+  理想心率：55～70次/分钟<br/>
+  最佳运动心律控制区域：<br/>
+  一般人：<br/>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;最大运动心率 =（220 - 现在年龄）* 0.8<br/>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;最小运动心率 =（220 - 现在年龄）* 0.6<br/>
+  心脏问题的人：<br/>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;心率控制上限 = 晨脉 * 1.8<br/>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;心率控制下限 = 晨脉 * 1.4<br/>
+
+</div>
+
+
+  </ion-content>
+
+
+
+
+
+
+</ion-view>
+
+
